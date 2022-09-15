@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script> -->
+    <title>Web masters</title>
+    <script src="/index.js"></script>
+</head>
+
+<body>
+
+    <!-- Mobile Navbar -->
+    <div class="w-full h-full hidden z-[80]" id="mobile-nav">
+        <div class="w-full  flex justify-center items-center absolute top-24">
+            <div class="w-[90vw] h-[65vh] rounded-xl bg-[#3B3054]">
+                <div class="flex flex-col w-full h-full items-center py-8">
+                    <h1 class="text-white text-lg my-2">Features</h1>
+                    <h1 class="text-white text-lg my-2">Pricing</h1>
+                    <h1 class="text-white text-lg my-2">Resources</h1>
+                    <div class="mt-8 bg-zinc-100 opacity-20 h-[0.1rem] w-[80vw]"></div>
+                    <h1 class="text-white text-lg my-3">Login</h1>
+                    <button class="mt-3 px-4 w-[80%] py-2 rounded-3xl text-white bg-[#2ACFCF]">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="flex flex-row justify-between z-[80] my-8 mx-3 md:mx-24">
+        <div class="flex flex-row items-center">
+            <h1 class="text-2xl font-bold mx-3">Shortly</h1>
+            <p class="hidden md:block text-md font-medium mx-3 text-[#BFBFBF]">Features</p>
+            <p class="hidden md:block text-md font-medium mx-3 text-[#BFBFBF]">Pricing</p>
+            <p class="hidden md:block text-md font-medium mx-3 text-[#BFBFBF]">Resources</p>
+        </div>
+
+        <div class="flex flex-row items-center">
+            <p class="hidden md:block text-md font-medium mx-3 text-[#BFBFBF]">
+                Login
+            </p>
+
+            <button class="hidden md:block mx-3 px-4 py-2 rounded-3xl text-white bg-[#2ACFCF]">
+                Sign Up
+            </button>
+
+            <button class="z-[100] block md:hidden " id="menu-btn" onclick="menu()"> <img src="/assets/menu.svg" class="w-6 h-6"  alt=""></button>
+        </div>
+    </div>
+
+    <!-- Hero section -->
+    <div class="flex flex-col-reverse md:flex-row justify-between my-8 mx-4 md:mx-24">
+        <div class="flex flex-col items-center md:items-start justify-center">
+            <h1 class="text-5xl font-bold">More than just shorter links</h1>
+            <p class="text-md font-medium my-3 text-[#BFBFBF]">
+                Build your brand’s recognition and get detailed insights
+                on how your links are performing.
+            </p>
+            <button class="mt-6 px-4 w-[10rem] py-2 rounded-3xl text-white bg-[#2ACFCF]">
+                Get started
+            </button>
+        </div>
+        <div class="flex flex-col my-4 items-left ">
+
+            <img src="/assets/illustration-working.svg" class="w-full h-full " alt="">
+
+        </div>
+    </div>
+
+    <!-- Statistics Section -->
+    <div class="flex flex-col relative mt-[6rem] w-full bg-gray-100">
+        <!-- Search Bar container -->
+        <div class="searchbar-section flex justify-center flex-row w-full">
+            <div
+                class="flex flex-col md:flex-row justify-center items-center h-32 md:h-24 rounded-xl absolute top-[-60px] md:top-[-40px] w-[80w] md:w-[75vw] bg-teal search-bar-container">
+                <input type="text" class="w-[85%] md:w-[70%] h-10 px-12 my-1 mx-3 rounded-lg"
+                    placeholder="Shorten a link here..." />
+                <button class="px-3 mx-3 mt-2 md:mt-0 w-[90%] md:w-[10rem] py-2 rounded-lg text-white bg-[#2ACFCF]">
+                    Shorten It!
+                </button>
+            </div>
+        </div>
+
+        <!-- Advanced statistics section -->
+        <div class="flex flex-col mt-32 items-center py-24">
+            <h2 class="text-2xl font-bold"> Advanced Statistics</h2>
+            <div class="w-[95vw] md:w-[40%] text-center">
+                <p class="text-md font-medium my-3 text-[#BFBFBF]">
+                    Track how your links are performing across the web with our
+                    advanced statistics dashboard.
+                </p>
+            </div>
+
+            <div class="card-section mt-16 flex flex-col md:flex-row gap-6 w-[85%]">
+                <div
+                    class="card flex flex-col items-center text-center md:items-start md:text-left w-full md:w-1/3 h-full bg-white px-4 py-8 rounded relative">
+                    <div class="flex bg-[#3B3054] w-14 h-14 p-3 rounded-full absolute top-[-2rem]">
+                        <img src="/assets/icon-brand-recognition.svg" class="w-full" alt="">
+                    </div>
+                    <h2 class="text-lg font-bold my-3">Brand Recognition</h2>
+                    <p class="text-md font-medium my-3 text-[#BFBFBF]">
+                        Boost your brand recognition with each click. Generic links don’t
+                        mean a thing. Branded links help instil confidence in your content.
+                    </p>
+                </div>
+
+                <div
+                    class="card flex flex-col items-center text-center md:items-start md:text-left w-full md:w-1/3 h-full bg-white px-4 py-8 rounded relative mt-6 md:mt-16">
+                    <div class="flex bg-[#3B3054] w-14 h-14 p-3 rounded-full absolute top-[-2rem]">
+                        <img src="/assets/icon-detailed-records.svg" class="w-full" alt="">
+                    </div>
+                    <h2 class="text-lg font-bold my-3">Detailed Records</h2>
+                    <p class="text-md font-medium my-3 text-[#BFBFBF]">
+                        Gain insights into who is clicking your links. Knowing when and where
+                        people engage with your content helps inform better decisions.
+                    </p>
+                </div>
+
+                <div
+                    class="card flex flex-col items-center text-center md:items-start md:text-left md:w-1/3 h-full bg-white px-4 py-8 rounded relative mt-6 md:mt-32">
+                    <div class="flex bg-[#3B3054] w-14 h-14 p-3 rounded-full absolute top-[-2rem]">
+                        <img src="/assets/icon-fully-customizable.svg" class="w-full" alt="">
+                    </div>
+                    <h2 class="text-lg font-bold my-3">Fully Customizable</h2>
+                    <p class="text-md font-medium my-3 text-[#BFBFBF]">
+                        Improve brand awareness and content discoverability through customizable
+                        links, supercharging audience engagement.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-section py-16">
+            <h1 class="text-white text-3xl text-center font-bold">Boost your links today</h1>
+            <div class="flex flex-row justify-center mt-6">
+                <button class="px-4 py-2 rounded-3xl text-white bg-[#2ACFCF]">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

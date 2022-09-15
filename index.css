@@ -1,0 +1,19 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.search-bar-container{
+    background: url(/assets/bg-shorten-desktop.svg) #3B3054 no-repeat;
+}
+.footer-section{
+    background: url(/assets/bg-boost-desktop.svg) #3B3054 no-repeat;
+}
+
+@media (max-width: 376px){
+    .search-bar-container{
+        background: url(/assets/bg-shorten-mobile.svg) #3B3054 no-repeat;
+    }
+
+    .footer-section{
+        background: url(/assets/bg-boost-mobile.svg) #3B3054 no-repeat;
+    }
+}
